@@ -1,4 +1,5 @@
 FROM ubuntu:14.04
+
 MAINTAINER Arnault Droz-dit-Busset for Autodomotalus <https://github.com/autodomotalus>
 
 RUN apt-get update
