@@ -17,4 +17,4 @@ RUN apt-get install -y curl wget bzip2 nano
 
 ENV HOME /home/developer
 
-RUN mkdir -p $HOME/data
+RUN mkdir -p $HOME/workspace
