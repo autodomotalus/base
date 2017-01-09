@@ -11,5 +11,7 @@ RUN export uid=1000 gid=1000 && \
     chmod 0440 /etc/sudoers.d/developer && \
     chown ${uid}:${gid} -R /home/developer
 
+RUN mkdir $HOME/data
+
 USER developer
 ENV HOME /home/developer
