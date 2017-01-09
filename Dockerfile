@@ -13,4 +13,3 @@ RUN export uid=1000 gid=1000 && \
 
 USER developer
 ENV HOME /home/developer
-CMD /bin/bash
