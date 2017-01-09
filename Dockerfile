@@ -13,7 +13,15 @@ RUN export uid=1000 gid=1000 && \
     chmod 0440 /etc/sudoers.d/developer && \
     chown ${uid}:${gid} -R /home/developer
 
-RUN apt-get install -y curl wget bzip2 nano 
+# Install some utilities: wget bzip2 nano
+RUN apt-get install -y wget bzip2 nano 
+
+# Install curl
+RUN apt-get update && \
+    apt-get install -y curl && \
+    apt-get clean && \
+    rm -rf /var/lib/apt/lists/*
+
 
 ENV HOME /home/developer
 
