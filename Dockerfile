@@ -1,6 +1,6 @@
 FROM ubuntu:16.04
 
-RUN apt-get update && apt-get install google-chrome-stable
+RUN apt-get update
 
 # Replace 1000 with your user / group id
 RUN export uid=1000 gid=1000 && \
@@ -13,4 +13,4 @@ RUN export uid=1000 gid=1000 && \
 
 USER developer
 ENV HOME /home/developer
-CMD /usr/bin/chrome
+CMD /bin/bash
