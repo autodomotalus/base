@@ -1,6 +1,6 @@
 FROM ubuntu:14.04
 
-MAINTAINER Arnault Droz-dit-Busset for Autodomotalus <https://github.com/autodomotalus>
+MAINTAINER Autodomotalus <https://github.com/autodomotalus>
 
 RUN apt-get update
 
@@ -13,7 +13,8 @@ RUN export uid=1000 gid=1000 && \
     chmod 0440 /etc/sudoers.d/developer && \
     chown ${uid}:${gid} -R /home/developer
 
-USER developer
+RUN apt-get install -y curl wget bzip2 nano 
+
 ENV HOME /home/developer
 
 RUN mkdir -p $HOME/data
