@@ -14,7 +14,7 @@ RUN export uid=1000 gid=1000 && \
     chown ${uid}:${gid} -R /home/developer
 
 # Install some utilities: wget bzip2 nano
-RUN apt-get install -y wget bzip2 nano unzip maven curl && \
+RUN apt-get install -y wget bzip2 nano unzip maven curl git && \
     apt-get clean && \
     rm -rf /var/lib/apt/lists/*
   
