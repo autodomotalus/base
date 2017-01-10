@@ -14,15 +14,13 @@ RUN export uid=1000 gid=1000 && \
     chown ${uid}:${gid} -R /home/developer
 
 # Install some utilities: wget bzip2 nano
-RUN apt-get install -y wget bzip2 nano 
-
-# Install curl
-RUN apt-get update && \
-    apt-get install -y curl && \
+RUN apt-get install -y wget bzip2 nano unzip maven curl && \
     apt-get clean && \
     rm -rf /var/lib/apt/lists/*
-
+  
+RUN mkdir -p $HOME/workspace
 
 ENV HOME /home/developer
+ENV WORK $HOME/workspace
 
-RUN mkdir -p $HOME/workspace
+
