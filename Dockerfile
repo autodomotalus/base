@@ -1,4 +1,4 @@
-FROM ubuntu:14.04
+FROM ubuntu:bionic
 
 MAINTAINER Autodomotalus <https://github.com/autodomotalus>
 
